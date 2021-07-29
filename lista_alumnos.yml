@@ -1,0 +1,37 @@
+alumnos:
+- item_id: 2
+  matricula: 10
+  nombre: Miguel
+  apaterno: 'Intzin '
+  amaterno: "L\xF3pez"
+  edad: 22
+  correo: luis@gmail.com
+  telefono: 9193421323
+  carrera: Redes Inteligentes
+- item_id: 3
+  matricula: 13
+  nombre: Manuel
+  apaterno: Ruiz
+  amaterno: Cruz
+  edad: 22
+  correo: manuel@gmail.com
+  telefono: 9191547623
+  carrera: Redes Inteligentes
+- item_id: 4
+  matricula: 14
+  nombre: Pedro
+  apaterno: "V\xE1zquez"
+  amaterno: "S\xE1nchez"
+  edad: 22
+  correo: pedr0@gmail.com
+  telefono: 9191571308
+  carrera: Redes Inteligentes
+- item_id: 5
+  matricula: 15
+  nombre: Daniel
+  apaterno: Perez
+  amaterno: Santiz
+  edad: 23
+  correo: dany@gmail.com
+  telefono: 9611452313
+  carrera: Redes Inteligentes
