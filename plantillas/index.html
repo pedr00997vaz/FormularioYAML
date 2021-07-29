@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>Equipo6</title>
+    <link href="{{ url_for('recursos', path='/bootstrap.min.css') }}" rel="stylesheet">
+    <script src="{{ url_for('recursos', path='/bootstrap.bundle.min.js') }}"></script>
+</head>
+<body>
+    <br>
+    <a href="/lista"><button class="btn btn-primary">Ver lista</button></a>
+    <h1>Bienvenidos</h1>
+    <h4><p>Este sitio le pertenece al Equipo6 y mostrará los datos de los integrantes</p></h4>
+    <br>
+            {% for fila in lista %}
+               <a href="/ver_datoPersonal/{{lista.index(fila)}}">{{fila.get('nombre')}} {{fila.get('apaterno')}} {{fila.get('amaterno')}}
+
+                <br>
+            {% endfor %}
+    </body>
+    </html>
+
