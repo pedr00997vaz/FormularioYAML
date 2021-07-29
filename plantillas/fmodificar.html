@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Modificar</title>
+    <link href="{{ url_for('recursos', path='/bootstrap.min.css') }}" rel="stylesheet">
+    <script src="{{ url_for('recursos', path='/bootstrap.bundle.min.js') }}"></script>
+<head>
+    <body>
+        <br>
+        <h3>Modificar integrante</h3>
+        <br>
+        {% for diccionario in lista %}
+            {% if diccionario.get('item_id') == id: %}
+            <form method="POST" action="/modificar_integranteYAML/{{lista.index(diccionario)}}">
+                <div class="col-sm-3 form-group">
+                    <label class="col-form-label">Matricula:</label>
+                    <input type="number" name="f_matricula" class="form-control" required value="{{ diccionario.get('matricula') }}">
+                    <label class="col-sm-2 col-form-label">Nombre:</label>
+                    <input type="text" name="f_nombre" class="form-control" required value="{{ diccionario.get('nombre') }}">
+                    <label >Apellido Paterno:</label>
+                    <input type="text" name="f_apaterno" class="form-control" required value="{{ diccionario.get('apaterno')}}">
+                    <label >Apellido Materno:</label>
+                    <input type="text" name="f_amaterno" class="form-control" required value="{{ diccionario.get('amaterno')}}">
+                    <label class="col-sm-2 col-form-label">Edad:</label>
+                    <input type="number" name="f_edad" class="form-control" required value="{{ diccionario.get('edad')}}">
+                    <label class="col-sm-2 col-form-label">Correo:</label>
+                    <input type="email" name="f_correo" class="form-control" required value="{{ diccionario.get('correo')}}">
+                    <label class="col-sm-2 col-form-label">Teléfono:</label>
+                    <input type="number" name="f_telefono" class="form-control" required value="{{ diccionario.get('telefono')}}">
+                    <label class="col-sm-2 col-form-label">Carrera:</label>
+                    <input type="text" name="f_carrera" class="form-control" required value="{{ diccionario.get('carrera')}}">
+                    <br>
+                    <a href="/lista" class="btn btn-danger">Cancelar</a>
+                    <button class="btn btn-primary" type="submit">Modificar</button>
+                </div>
+            </form>
+            {% endif %}
+        {% endfor %}
+
+    </body>     
+</html>
