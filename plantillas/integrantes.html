@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Dato personal</title>
+        <link href="{{ url_for('recursos', path='/bootstrap.min.css') }}" rel="stylesheet">
+        <script src="{{ url_for('recursos', path='/bootstrap.bundle.min.js') }}"></script>
+    <head>
+    <body>
+        <h3>Datos personales del integrante</h3>
+        <a href="/"><button class="btn btn-primary">Regresar</button></a>
+        {% for diccionario in lista %}
+            {% if diccionario.get('item_id') == id: %}
+                <li>Matricula: {{ diccionario.get('matricula') }}</li>
+                <li>Nombre: {{ diccionario.get('nombre')}}</li>
+                <li>Apellido Paterno: {{diccionario.get('apaterno')}}</li>
+                <li>Apellido Materno: {{diccionario.get('amaterno')}}</li>
+                <li>Edad: {{diccionario.get('edad')}}</li>
+                <li>Correo: {{diccionario.get('correo')}}</li>
+                <li>Teléfono: {{diccionario.get('telefono')}}</li>
+                <li>Carrera: {{diccionario.get('carrera')}}</li>
+            {% endif %}
+        {% endfor %}
+    </body>
+</html>
